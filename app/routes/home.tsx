@@ -37,9 +37,6 @@ export default function Home() {
 						<a className="hover:text-slate-900" href="#features">
 							Features
 						</a>
-						<a className="hover:text-slate-900" href="#tech">
-							Tech
-						</a>
 					</nav>
 					<button className="rounded-full bg-slate-900 px-5 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800">
 						Request a demo
@@ -302,53 +299,6 @@ export default function Home() {
 					</div>
 				</section>
 
-				<section id="tech" className="py-16">
-					<div className="mx-auto w-full max-w-6xl px-6">
-						<div className="grid gap-10 md:grid-cols-[1.2fr_1fr] md:items-center">
-							<div>
-								<p className="text-xs uppercase tracking-[0.2em] text-slate-500">
-									Tech stack
-								</p>
-								<h2 className="mt-2 text-3xl font-semibold text-slate-900">
-									Modern, reliable, and ready to scale.
-								</h2>
-								<p className="mt-4 text-slate-600">
-									Sessionly is built on a trusted stack for mobile speed and data
-									safety.
-								</p>
-								<div className="mt-6 flex flex-wrap gap-3 text-sm">
-									<span className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-slate-700">
-										React Native (Expo)
-									</span>
-									<span className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-slate-700">
-										Supabase (PostgreSQL + Auth)
-									</span>
-									<span className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-slate-700">
-										TypeScript
-									</span>
-									<span className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-slate-700">
-										React Navigation 7
-									</span>
-								</div>
-							</div>
-							<div className="rounded-3xl border border-slate-200 bg-slate-50 p-8">
-								<p className="text-sm font-semibold text-slate-900">
-									Launch checklist
-								</p>
-								<ul className="mt-4 space-y-3 text-sm text-slate-600">
-									<li>✅ Set up a Supabase project.</li>
-									<li>✅ Create programs with invite codes.</li>
-									<li>✅ Manage announcements and schedules.</li>
-									<li>✅ Archive completed programs.</li>
-									<li>✅ Support parents in read-only access.</li>
-								</ul>
-								<button className="mt-6 w-full rounded-2xl bg-slate-900 px-4 py-3 text-sm font-semibold text-white">
-									Request onboarding help
-								</button>
-							</div>
-						</div>
-					</div>
-				</section>
 
 				<section className="border-t border-slate-200 bg-white py-16">
 					<div className="mx-auto flex w-full max-w-6xl flex-col items-start gap-6 px-6 md:flex-row md:items-center md:justify-between">
