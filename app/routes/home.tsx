@@ -1,4 +1,5 @@
 import type { Route } from "./+types/home";
+import { Link } from "react-router";
 
 export function meta({}: Route.MetaArgs) {
 	return [
@@ -329,7 +330,7 @@ export default function Home() {
 						<p>Calm, structured communication for short-lived programs.</p>
 					</div>
 					<div className="flex flex-wrap gap-6">
-						<span>Privacy</span>
+						<Link to="/privacy" className="hover:text-slate-700">Privacy</Link>
 						<span>Security</span>
 						<span>Support</span>
 					</div>
