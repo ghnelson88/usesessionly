@@ -324,15 +324,20 @@ export default function Home() {
 			</main>
 
 			<footer className="border-t border-slate-200 bg-slate-50 py-10">
-				<div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-6 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
-					<div>
-						<p className="text-slate-700 font-semibold">Sessionly</p>
-						<p>Calm, structured communication for short-lived programs.</p>
+				<div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 text-sm text-slate-500">
+					<div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+						<div>
+							<p className="text-slate-700 font-semibold">Sessionly</p>
+							<p>Calm, structured communication for short-lived programs.</p>
+						</div>
+						<div className="flex flex-wrap gap-6">
+							<Link to="/privacy" className="hover:text-slate-700">Privacy</Link>
+							<span>Security</span>
+							<span>Support</span>
+						</div>
 					</div>
-					<div className="flex flex-wrap gap-6">
-						<Link to="/privacy" className="hover:text-slate-700">Privacy</Link>
-						<span>Security</span>
-						<span>Support</span>
+					<div className="border-t border-slate-200 pt-6 text-xs text-slate-400">
+						<p>&copy; 2026 G&amp;J Family Ventures LLC. All rights reserved.</p>
 					</div>
 				</div>
 			</footer>
