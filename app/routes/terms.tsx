@@ -857,9 +857,12 @@ export default function Terms() {
 								Privacy
 							</Link>
 							<span className="font-medium text-body">Terms</span>
-							<a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-ink">
-								Contact
-							</a>
+							<Link to="/security" className="hover:text-ink">
+								Security
+							</Link>
+							<Link to="/support" className="hover:text-ink">
+								Support
+							</Link>
 						</div>
 					</div>
 					<div className="border-t border-sage-mist pt-6 text-xs text-meta">
