@@ -1,16 +1,74 @@
 @import "tailwindcss" source(".");
 
+/*
+ * Sessionly brand v2 — "Frame in Sage".
+ *
+ * Transcribed from the canonical tokens at `src/utils/theme.ts:9-61` in the
+ * Sessionly app repo, which is also the source for `web-intake/lib/theme.ts`
+ * and `web-console/lib/theme.ts`. Those two are byte-diffed against each other
+ * by `web-console/__tests__/theme-sync.test.ts`; this third copy is NOT in that
+ * check, which is precisely how this site spent six months on stock Tailwind
+ * `slate` while the product moved to sage. See TODOS #113.
+ *
+ * Before this file existed, a family's journey was three different products in
+ * a row: marketing (navy #0F172B, Inter) -> apply.usesessionly.com (sage) ->
+ * the app (sage on cream). Not one of Sage Deep, Cream, Sand or Ink appeared
+ * anywhere in this site's CSS.
+ */
 @theme {
+	/* Sage — primary. Buttons, links, active states. */
+	--color-sage-deep: #2e4a3c;
+	--color-sage: #4f7a63;
+	--color-sage-mist: #d8dfd9;
+
+	/* Cream — the page itself. `surface` stays pure white on purpose: per the
+	   design-system table, cards are Surface #FFFFFF *on* cream, not cream on
+	   cream. Flattening the two removes the frame the brand is named for. */
+	--color-cream: #f4efe6;
+	--color-cream-tinted: #ebe4d6;
+	--color-surface: #ffffff;
+
+	/* Sand — the warm accent. Replaces the stock `emerald` status chip;
+	   emerald is not a Sessionly colour and never was. */
+	--color-sand: #d4a574;
+
+	/* Ink and text. Named `body`/`meta` rather than `text-secondary` /
+	   `text-tertiary` so the generated utilities read `text-body` and
+	   `text-meta` instead of `text-text-secondary`. Same two values as
+	   Text Secondary and Text Tertiary in the design-system table. */
+	--color-ink: #1a2420;
+	--color-body: #4a5550;
+	--color-meta: #8a9a92;
+
+	/* Status. */
+	--color-success: #4a7c59;
+	--color-error: #b23a3a;
+
+	/*
+	 * Typography. `src/utils/theme.ts:110-119` names Inter Tight for UI and
+	 * Fraunces italic for display accents. This site loaded plain `Inter`.
+	 */
 	--font-sans:
-		"Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+		"Inter Tight", "Inter", ui-sans-serif, system-ui, sans-serif,
+		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+		"Noto Color Emoji";
+	--font-display: "Fraunces", Georgia, "Times New Roman", serif;
 }
 
+/*
+ * NO DARK MODE, and that is a decision rather than an omission.
+ *
+ * This file previously carried `@apply bg-white dark:bg-gray-950`, so a visitor
+ * with a dark system preference got #030712 — a colour that appears nowhere in
+ * the brand — while every foreground class on the page still assumed a light
+ * ground. Sessionly has no dark palette: `src/utils/theme.ts` defines one set
+ * of values and both web transcriptions render light-only. A half-built dark
+ * mode that swaps the background and nothing else is worse than none, because
+ * it is the state a real visitor lands in without ever choosing it.
+ */
 html,
 body {
-	@apply bg-white dark:bg-gray-950;
-
-	@media (prefers-color-scheme: dark) {
-		color-scheme: dark;
-	}
+	background-color: var(--color-cream);
+	color: var(--color-ink);
+	-webkit-font-smoothing: antialiased;
 }
