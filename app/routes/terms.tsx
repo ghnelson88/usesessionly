@@ -1,5 +1,6 @@
 import type { Route } from "./+types/terms";
 import { Link } from "react-router";
+import { SessionlyMark } from "../components/SessionlyMark";
 
 /*
  * These Terms are written against the product as it actually exists. Every
@@ -46,9 +47,7 @@ export default function Terms() {
 			<header className="border-b border-sage-mist">
 				<div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6">
 					<Link to="/" className="flex items-center gap-3">
-						<span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-sage-deep text-sm font-semibold text-white">
-							S
-						</span>
+						<SessionlyMark idSuffix="terms" />
 						<div>
 							<p className="text-lg font-semibold">Sessionly</p>
 							<p className="text-xs uppercase tracking-[0.2em] text-meta">
