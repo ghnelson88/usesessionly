@@ -473,6 +473,9 @@ export default function Home() {
 							<Link to="/privacy" className="hover:text-ink">
 								Privacy
 							</Link>
+							<Link to="/terms" className="hover:text-ink">
+								Terms
+							</Link>
 							<a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-ink">
 								Contact
 							</a>

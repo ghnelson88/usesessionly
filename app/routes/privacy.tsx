@@ -851,6 +851,9 @@ export default function Privacy() {
 						    privacy page. */}
 						<div className="flex flex-wrap gap-6">
 							<span className="font-medium text-body">Privacy</span>
+							<Link to="/terms" className="hover:text-ink">
+								Terms
+							</Link>
 							<a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-ink">
 								Contact
 							</a>
