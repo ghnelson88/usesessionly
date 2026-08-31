@@ -377,15 +377,27 @@ export default function Home() {
 								<p className="text-xs uppercase tracking-[0.2em] text-sage-mist">
 									For operators running several programs
 								</p>
+								{/*
+								 * Surfaces are named per bullet on purpose. Every claim here
+								 * is true of the product, but they do not all live in the
+								 * same place -- applications and triage are the web console,
+								 * equipment and letters are the mobile app, and the school
+								 * calendar is both. Verified 2026-08-30: `web-console/` has
+								 * ZERO references to equipment. A column headed "for
+								 * operators" whose second bullet says "web console" would
+								 * otherwise read as a promise that all five are in it, which
+								 * is the kind of thing a buyer discovers in a demo.
+								 */}
 								<ul className="mt-4 space-y-3 text-sm text-cream">
 									<li>Take applications on a public page, with your own questions.</li>
 									<li>Review, accept, and waitlist from one web console.</li>
 									<li>
-										Track shared equipment across terms — who has kit 7, and
-										what never came back.
+										See which class days hit a school closure — in the console,
+										and before you generate a recurring schedule.
 									</li>
 									<li>
-										See at a glance which class days hit a school closure.
+										Track shared equipment across terms from your phone — who
+										has kit 7, and what never came back.
 									</li>
 									<li>
 										Draft the welcome letter from the program you already set

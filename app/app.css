@@ -38,7 +38,13 @@
 	   Text Secondary and Text Tertiary in the design-system table. */
 	--color-ink: #1a2420;
 	--color-body: #4a5550;
-	--color-meta: #8a9a92;
+	/* #606B66, NOT #8A9A92. The Design System table in the app repo's CLAUDE.md
+	   gives the lighter value, and it is wrong: all three code copies
+	   (src/utils/theme.ts, web-intake/lib/theme.ts, web-console/lib/theme.ts)
+	   say #606B66, and theme.ts is what CLAUDE.md itself names as canonical.
+	   The lighter value also fails contrast on cream. Verified 2026-08-30 by
+	   diffing all four sources; the doc row is being corrected separately. */
+	--color-meta: #606b66;
 
 	/* Status. */
 	--color-success: #4a7c59;
